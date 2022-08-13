@@ -22,7 +22,45 @@ public class UserController {
   @Autowired
   UserService userService;
 
-  @PostMapping("/startshift")
+
+  @PostMapping("/endLunch")
+  public ResponseEntity<Shift> endLunch()
+  {
+    System.out.println("endLunch called");
+    return shiftService.endLunch();
+  }
+
+  @PostMapping("/startLunch")
+  public ResponseEntity<Shift> startLunch()
+  {
+    System.out.println("startLunch called");
+    return shiftService.startLunch();
+  }
+
+
+  @PostMapping("/endBreak")
+  public ResponseEntity<Shift> endBreak()
+  {
+    System.out.println("endBreak called");
+    return shiftService.endBreak();
+  }
+
+  @PostMapping("/startBreak")
+  public ResponseEntity<Shift> startBreak()
+  {
+    System.out.println("startBreak called");
+    return shiftService.startBreak();
+  }
+
+  @PostMapping("/endShift")
+  public ResponseEntity<Shift> endShift()
+  {
+    System.out.println("endShift called");
+    return shiftService.endShift();
+  }
+
+
+  @PostMapping("/startShift")
   public ResponseEntity<?> startShift()
   {
     System.out.println("Called startShift");
