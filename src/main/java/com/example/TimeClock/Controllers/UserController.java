@@ -43,7 +43,6 @@ public class UserController {
   @PostMapping("/endBreak")
   public ResponseEntity<?> endBreak(Authentication authentication)
   {
-    System.out.println("endBreak called");
     return shiftService.endBreak(authentication.getName());
   }
 

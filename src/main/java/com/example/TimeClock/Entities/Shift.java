@@ -3,6 +3,7 @@ package com.example.TimeClock.Entities;
 import javax.persistence.*;
 
 @Entity
+@Table(name="shift")
 public class Shift {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
